@@ -30,7 +30,7 @@ class Exercise(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     muscle = models.ForeignKey(Muscle, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)    
-    difficulty = models.CharField(max_length=20)
+    difficulty = models.CharField(max_length=100)
     gender = models.CharField(max_length=20)
     video_tutorial = models.OneToOneField(VideoTutorials, on_delete=models.CASCADE)
 
