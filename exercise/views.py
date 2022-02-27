@@ -1,4 +1,5 @@
 from unicodedata import category
+from django.http import QueryDict
 from rest_framework import generics, mixins
 from rest_framework.response import Response
 from exercise.models import Category, TextTutorials, VideoTutorials
@@ -84,3 +85,7 @@ class ExerciseView(generics.GenericAPIView, mixins.ListModelMixin):
 
     def post(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
+
+class GetAllExerciseView(generics.ListAPIView):
+    serializer_class = ExerciseSerializer
+    queryset = Exercise.objects.all()
