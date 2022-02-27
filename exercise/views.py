@@ -15,7 +15,7 @@ class CreateExerciseView(generics.GenericAPIView, mixins.CreateModelMixin):
         categories = ['Stretches', 'Bodyweight', 'Barbell', 'Dumbbells', 'Kettlebells']
         muscles = ['Traps', 'Shoulders', 'Chest', 'Biceps', 'Abdominals', 'Forearms', 'Quads'
                     'Calves', 'Triceps', 'Glutes', 'Traps_middle', 'Lats', 'Lowerback', 'Hamstrings']
-        gender = ['Male', 'Female']
+        gender = ['Male']
 
         for i in gender:
             for j in categories:
